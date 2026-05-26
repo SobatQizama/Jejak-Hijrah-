@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jejak Hijrah - LMS</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    /* =========================
+       LAYOUT LMS
+    ========================== */
+    .learning-layout{
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      min-height: 100vh;
+    }
+
+    /* =========================
+       SIDEBAR
+    ========================== */
+    .sidebar{
+      background: white;
+      border-right: 1px solid #ddd;
+      padding: 30px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sidebar h2{
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    .sidebar p{
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+
+    .sidebar-menu{
+      list-style: none;
+    }
+
+    .sidebar-menu li{
+      margin-bottom: 20px;
+    }
+
+    .sidebar-menu a{
+      text-decoration: none;
+      color: var(--text-main);
+      transition: 0.3s;
+      display: block;
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    .sidebar-menu a:hover{
+      background: var(--accent-color);
+    }
+
+    .subbab{
+      margin-top: 10px;
+      margin-left: 15px;
+    }
+
+    .subbab a{
+      font-size: 0.95rem;
+    }
+
+    /* =========================
+       AREA KONTEN
+    ========================== */
+    .content{
+      padding: 40px;
+    }
+
+    .content-header{
+      margin-bottom: 40px;
+    }
+
+    .content-header h1{
+      margin-bottom: 15px;
+      color: var(--primary-color);
+    }
+
+    .content-header p{
+      color: var(--text-secondary);
+      max-width: 800px;
+    }
+
+    /* =========================
+       CARD MATERI
+    ========================== */
+    .materi-card{
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+
+    .materi-card h2{
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    .materi-card h3{
+      margin-top: 30px;
+      margin-bottom: 15px;
+      color: var(--secondary-color);
+    }
+
+    .materi-card p{
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+
+    .materi-card ul{
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .materi-card li{
+      margin-bottom: 12px;
+    }
+
+    /* =========================
+       BOX INTERAKTIF
+    ========================== */
+    .interactive-box{
+      background: #f8f8f8;
+      border-left: 5px solid var(--primary-color);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 25px;
+    }
+
+    .interactive-box a{
+      color: var(--secondary-color);
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* =========================
+       VIDEO / EMBED
+    ========================== */
+    .embed-container{
+      margin-top: 25px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #ddd;
+    }
+
+    iframe{
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+    @media(max-width: 768px){
+
+      .learning-layout{
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar{
+        position: relative;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .content{
+        padding: 20px;
+      }
+
+      .materi-card{
+        padding: 25px;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="container nav-container">
+
+      <div class="logo">
+        Jejak Hijrah LMS
+      </div>
+
+      <nav class="nav-menu active">
+        <a href="index.html">Kembali ke Landing Page</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       LAYOUT LMS
+  ========================== -->
+  <div class="learning-layout">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+    <aside class="sidebar">
+
+      <h2>
+        Jejak Hijrah
+      </h2>
+
+      <p>
+        LMS sederhana pembelajaran Sirah Nabawiyah berbasis multimedia interaktif.
+      </p>
+
+      <ul class="sidebar-menu">
+
+        <li>
+          <a href="#bab1">
+            BAB I - Latar Belakang dan Ancaman di Makkah
+          </a>
+
+          <div class="subbab">
+            <a href="#sub1">1.1 Perubahan Besar Dakwah</a>
+            <a href="#sub2">1.2 Masa Pemboikotan</a>
+            <a href="#sub3">1.3 Darun Nadwah</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#">
+            BAB II - [Akan Ditambahkan]
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            BAB III - [Akan Ditambahkan]
+          </a>
+        </li>
+
+      </ul>
+
+    </aside>
+
+
+    <!-- =========================
+         KONTEN UTAMA
+    ========================== -->
+    <main class="content">
+
+      <!-- Header -->
+      <div class="content-header">
+
+        <h1>
+          BAB I: LATAR BELAKANG DAN ANCAMAN DI MAKKAH
+        </h1>
+
+        <p>
+          Materi ini membahas kondisi masyarakat Makkah sebelum hijrah, bentuk penindasan terhadap umat Islam, hingga rencana pembunuhan Rasulullah SAW yang menjadi awal peristiwa hijrah ke Madinah.
+        </p>
+
+      </div>
+
+
+      <!-- =========================
+           SUBBAB 1
+      ========================== -->
+      <section class="materi-card" id="sub1">
+
+        <h2>
+          1.1 Perubahan Besar Dakwah dan Runtuhnya Kesombongan Quraisy
+        </h2>
+
+        <p>
+          Kondisi masyarakat Makkah sebelum Islam merupakan tatanan yang sangat menjunjung tinggi kasta, kesukuan, dan penyembahan berhala. Ketika Nabi Muhammad SAW mulai menyebarkan ajaran Islam secara terbuka, hal ini memicu sebuah “revolusi” nilai yang mengguncang sendi-sendi kehidupan kaum Quraisy.
+        </p>
+
+        <p>
+          Islam datang membawa pesan kesetaraan (al-musawah), di mana kemuliaan seseorang tidak lagi diukur dari nasab (keturunan) atau harta, melainkan dari ketakwaannya kepada Allah SWT.
+        </p>
+
+        <h3>
+          Faktor Penolakan Quraisy
+        </h3>
+
+        <ul>
+          <li>
+            <strong>Ancaman Kekuasaan:</strong>
+            Kesetaraan yang diajarkan Nabi Muhammad SAW mengancam hak-hak istimewa bangsawan Quraisy.
+          </li>
+
+          <li>
+            <strong>Faktor Ekonomi:</strong>
+            Dakwah tauhid dianggap dapat mengurangi pendapatan dari penyembahan berhala di Ka'bah.
+          </li>
+
+          <li>
+            <strong>Fanatisme Buta:</strong>
+            Mereka menganggap meninggalkan tradisi nenek moyang sebagai penghinaan.
+          </li>
+        </ul>
+
+        <!-- Box Game -->
+        <div class="interactive-box">
+
+          <h3>
+            Game Interaktif
+          </h3>
+
+          <p>
+            Klik link berikut untuk mencoba mini game pembelajaran:
+          </p>
+
+          <a href="https://gemini.google.com/share/d60d3cfc42c4" target="_blank">
+            Buka Game Interaktif
+          </a>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           SUBBAB 2
+      ========================== -->
+      <section class="materi-card" id="sub2">
+
+        <h2>
+          1.2 Puncak Penindasan dan Masa Pemboikotan (Syi'ib Abu Thalib)
+        </h2>
+
+        <p>
+          Melihat dakwah Islam yang tetap tumbuh, kaum Quraisy mulai menggunakan kekerasan fisik dan tekanan ekonomi yang sangat kejam.
+        </p>
+
+        <p>
+          Para sahabat dari golongan lemah seperti Bilal bin Rabah dan keluarga Sumayyah menjadi sasaran penyiksaan demi memaksa mereka kembali kepada kekafiran.
+        </p>
+
+        <h3>
+          Dampak Pemboikotan
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>Isolasi Total:</strong>
+            Umat Islam dilarang melakukan transaksi jual beli dan hubungan sosial.
+          </li>
+
+          <li>
+            <strong>Kelaparan Hebat:</strong>
+            Mereka terpaksa memakan dedaunan dan kulit binatang untuk bertahan hidup.
+          </li>
+
+          <li>
+            <strong>Tahun Kesedihan:</strong>
+            Rasulullah kehilangan Khadijah RA dan Abu Thalib.
+          </li>
+
+        </ul>
+
+        <div class="interactive-box">
+
+          <h3>
+            Refleksi Pembelajaran
+          </h3>
+
+          <p>
+            Menurut kamu, bagaimana sikap Rasulullah SAW menghadapi tekanan dan kesulitan tersebut?
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           SUBBAB 3
+      ========================== -->
+      <section class="materi-card" id="sub3">
+
+        <h2>
+          1.3 Rapat Darurat di Darun Nadwah (Rencana Pembunuhan)
+        </h2>
+
+        <p>
+          Setelah penduduk Yatsrib menyatakan kesetiaan mereka kepada Islam dalam Perjanjian Aqabah, kaum Quraisy merasa sangat terancam.
+        </p>
+
+        <p>
+          Mereka khawatir Nabi Muhammad SAW akan membangun kekuatan baru di luar Makkah dan mengancam posisi Quraisy sebagai pusat perdagangan.
+        </p>
+
+        <h3>
+          Keputusan Darun Nadwah
+        </h3>
+
+        <ul>
+
+          <li>
+            <strong>Strategi Pembunuhan Massal:</strong>
+            Setiap kabilah mengirimkan satu pemuda untuk menyerang Nabi secara bersama-sama.
+          </li>
+
+          <li>
+            <strong>Pengepungan Rumah Nabi:</strong>
+            Rumah Rasulullah SAW dikepung pada malam keberangkatan hijrah.
+          </li>
+
+        </ul>
+
+        <!-- Embed Video -->
+        <div class="embed-container">
+
+          <!-- Placeholder iframe -->
+          <iframe
+            src=""
+            title="Video Pembelajaran Hijrah"
+          ></iframe>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
